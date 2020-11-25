@@ -1,0 +1,106 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pelota {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 80;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0.5px solid green;
+  background: green;
+  -webkit-animation: rebota 1s alternate infinite ease-in;
+          animation: rebota 1s alternate infinite ease-in;
+}
+
+.pentagono {
+  position: relative;
+  z-index: 60;
+  border: solid 2px;
+  height: 8px;
+  width: 8px;
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+          clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  color: green;
+  background-color: green;
+}
+
+.hexagono {
+  color: green;
+  background-color: greenyellow;
+  position: absolute;
+  bottom: -1%;
+  height: 9px;
+  width: 14px;
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+          clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.hexagono__1 {
+  top: 8%;
+  left: 6%;
+  -webkit-transform: rotate(-37deg);
+          transform: rotate(-37deg);
+}
+
+.hexagono__2 {
+  top: 8%;
+  right: 6%;
+  -webkit-transform: rotate(37deg);
+          transform: rotate(37deg);
+}
+
+.hexagono__3 {
+  bottom: 22.5%;
+  right: -6.5%;
+  -webkit-transform: rotate(-74deg);
+          transform: rotate(-74deg);
+}
+
+.hexagono__4 {
+  bottom: 22.5%;
+  left: -6.5%;
+  -webkit-transform: rotate(74deg);
+          transform: rotate(74deg);
+}
+
+@-webkit-keyframes rebota {
+  90% {
+    height: 30px;
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    height: 24px;
+  }
+}
+
+@keyframes rebota {
+  90% {
+    height: 30px;
+  }
+  100% {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    height: 24px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,75 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pelota{  
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 80;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;    
+    border: 0.5px solid green;
+    background: green;
+    animation: rebota 1s alternate infinite ease-in;
+}
+.pentagono {    
+    position: relative;
+    z-index: 60;
+    border: solid 2px;
+    height: 8px;
+    width: 8px;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    color: green;
+    background-color: green;
+    
+}
+.hexagono{ 
+    color: green;
+    background-color: greenyellow;
+    position: absolute;
+    bottom:-1%;
+    //border: solid 0.3px ;
+    height: 9px;
+    width: 14px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    
+    &__1{
+        top: 8%;
+        left: 6%;
+        transform: rotate(-37deg);
+    }
+    &__2{
+        top: 8%;
+        right:  6%;
+        transform: rotate(37deg);
+    }
+    &__3{  
+        bottom: 22.5%;
+        right:  -6.5%;
+        transform: rotate(-74deg);
+    }
+    &__4{
+        bottom: 22.5%;
+        left:  -6.5%;
+        transform: rotate(74deg);
+    }
+    
+}
+
+@keyframes rebota{
+    90%{
+      height: 30px;
+    }    
+    100%{
+      transform: translateY(200px);
+      height: 24px;
+    }
+  }
+
+
+
+
