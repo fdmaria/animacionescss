@@ -1,0 +1,80 @@
+$tamaño_pelota:70px;
+$color_fondo:green;
+$color_poligonos:greenyellow;
+$altura_rebote: 200px;
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pelota{  
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 80;
+    width: $tamaño_pelota;
+    height: $tamaño_pelota;
+    border-radius: 50%;    
+    border: 0.5px solid $color_fondo;
+    background: $color_fondo;
+    animation: rebota 1s alternate infinite ease-in;
+}
+.pentagono {    
+    position: relative;
+    z-index: 60;
+    border: solid 2px;
+    height: 0.27 * $tamaño_pelota;
+    width: 0.27 * $tamaño_pelota;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    color: $color_fondo;
+    background-color: $color_fondo;
+    
+}
+.hexagono{ 
+    color: $color_fondo;
+    background-color: $color_poligonos;
+    position: absolute;
+    bottom:1%;
+    //border: solid 0.3px ;
+    height: 0.3 * $tamaño_pelota;
+    width: 0.47 * $tamaño_pelota;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    
+    &__1{
+        top: 8%;
+        left: 6.5%;
+        transform: rotate(-36deg);
+    }
+    &__2{
+        top: 8%;
+        right:  6.5%;
+        transform: rotate(36deg);
+    }
+    &__3{  
+        bottom: 24%;
+        right:  -5%;
+        transform: rotate(-74deg);
+    }
+    &__4{
+        bottom: 24%;
+        left:  -5%;
+        transform: rotate(74deg);
+    }
+    
+}
+
+@keyframes rebota{
+    90%{
+      height: $tamaño_pelota;
+    }    
+    100%{
+      transform: translateY($altura_rebote);
+      height:  $tamaño_pelota - 4px;
+    }
+  }
+
+
+
+
