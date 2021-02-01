@@ -1,9 +1,14 @@
 $tamaño_pelota:70px;
-$color_fondo:green;
-$color_poligonos:greenyellow;
+$color_fondo:black;
+$color_poligonos:white;
 $altura_rebote: 200px;
+$transparecia:0.404;
 
 .container{
+    position: fixed;
+    background: rgba(39,41,41,$transparecia);
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,12 +71,13 @@ $altura_rebote: 200px;
 }
 
 @keyframes rebota{
+
     90%{
       height: $tamaño_pelota;
     }    
     100%{
       transform: translateY($altura_rebote);
-      height:  $tamaño_pelota - 4px;
+      height:  $tamaño_pelota - 15px;
     }
   }
 
