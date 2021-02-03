@@ -1,0 +1,50 @@
+$tamañotodo:200px;
+$colorglobo: brown;
+$colorcerdo: #F4C2C2;
+
+.container{
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+ .globoaereo{
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+     z-index: 100;
+     width: $tamañotodo;
+     height: 2 * $tamañotodo;
+     border: solid black;
+ }
+ .globo{
+     position: relative;
+     width: $tamañotodo;
+     height: $tamañotodo;
+     border: solid black;
+     border-radius: 50%;
+ }
+ .soga{
+     position: absolute;
+     top: 45%;
+     height: $tamañotodo / 1.5;
+     width: $tamañotodo / $tamañotodo;
+     border: solid #000 0.5px;
+     &__d{        
+        left: 25%;
+        transform:  rotate(-15deg);
+     }
+     &__i{
+        right:  25%;
+        transform:  rotate(15deg);
+     }
+ }
+ .cesto{
+     position: absolute;
+     bottom: 0;
+     height: $tamañotodo/2.5;
+     width: $tamañotodo/1.4;
+     border: solid #000;
+     border-radius: 20% 20% 25% 25%/  65% 65% 30% 30%;
+ }
