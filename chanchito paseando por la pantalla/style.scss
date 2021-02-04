@@ -1,11 +1,18 @@
 $tamañotodo:200px;
 $colorglobo: brown;
-$colorcerdo: #F4C2C2;
+$colorcerdo: #fddfdc;
+$colorocico: #F4C2C2;
+$colornariz: #FF55A3;
+$colorborde: black;
+$colorcesto: linear-gradient(180deg, #f0d681, rgb(80, 53, 3));
+$grosorborde:2.5px;
 
 .container{
-   display: flex;
-   align-items: center;
-   justify-content: center; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
 }
  .globoaereo{
      position: relative;
@@ -47,4 +54,90 @@ $colorcerdo: #F4C2C2;
      width: $tamañotodo/1.4;
      border: solid #000;
      border-radius: 20% 20% 25% 25%/  65% 65% 30% 30%;
+     background: $colorcesto;
  }
+
+ .cerdito{    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    height: $tamañotodo / 2.5;
+    width: $tamañotodo / 2;
+    top: 59%;
+    border: solid $colorborde ;
+ }
+ .cara{    
+    position: relative;
+    height: $tamañotodo / 3;
+    width: $tamañotodo / 2;
+    border: solid $colorborde $grosorborde;
+    border-radius: 50%;
+    transform: rotate(-17deg);
+    background: $colorcerdo;
+ }
+ .orejas{
+    position: absolute;    
+    border: solid $colorborde $grosorborde;
+    border-radius: 80% 0;    
+    background: $colorcerdo;
+     &__d{
+        height: $tamañotodo/10;
+        width: $tamañotodo/10;
+     }
+     &__i{
+         right: 0%;
+        height: $tamañotodo/10;
+        width: $tamañotodo/10;
+        transform: rotate(73deg);
+     }
+ }
+ .ojos{
+     position: absolute;
+     width: 20%;
+     height: 2%;
+     top: 30%;
+     border:  solid #000 3px;
+     border-color:#000 transparent transparent transparent;     
+     border-radius: 50%/85% 85% 0 0;
+     &__d{
+         right: 20%;
+     }
+     &__i{
+         left: 20%;
+     }
+ }
+ .ocico{
+    position: absolute;
+    height: $tamañotodo/9;
+    width: $tamañotodo/6;
+    border: solid $colorborde $grosorborde;
+    background: $colorocico;
+    left: 34%;
+    top: 38%;
+    border-radius: 50%;
+ }
+ .nariz{
+    position: absolute;
+    height: $tamañotodo/24;
+    width: $tamañotodo/34;    
+    background: $colornariz;
+    border-radius: 50%;
+    top: 30%;
+     &__d{        
+        right: 14%;
+     }
+     &__i{
+        left:  14%;
+     }
+ }
+
+ .cuerpo{
+
+ }
+ .brazo-d{
+
+ }
+ .brazo-i{
+     
+}

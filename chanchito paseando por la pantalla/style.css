@@ -1,7 +1,12 @@
 .container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -63,5 +68,102 @@
   width: 142.85714px;
   border: solid #000;
   border-radius: 20% 20% 25% 25%/  65% 65% 30% 30%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f0d681), to(#503503));
+  background: linear-gradient(180deg, #f0d681, #503503);
+}
+
+.cerdito {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  width: 100px;
+  top: 59%;
+  border: solid black;
+}
+
+.cara {
+  position: relative;
+  height: 66.66667px;
+  width: 100px;
+  border: solid black 2.5px;
+  border-radius: 50%;
+  -webkit-transform: rotate(-17deg);
+          transform: rotate(-17deg);
+  background: #fddfdc;
+}
+
+.orejas {
+  position: absolute;
+  border: solid black 2.5px;
+  border-radius: 80% 0;
+  background: #fddfdc;
+}
+
+.orejas__d {
+  height: 20px;
+  width: 20px;
+}
+
+.orejas__i {
+  right: 0%;
+  height: 20px;
+  width: 20px;
+  -webkit-transform: rotate(73deg);
+          transform: rotate(73deg);
+}
+
+.ojos {
+  position: absolute;
+  width: 20%;
+  height: 2%;
+  top: 30%;
+  border: solid #000 3px;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 50%/85% 85% 0 0;
+}
+
+.ojos__d {
+  right: 20%;
+}
+
+.ojos__i {
+  left: 20%;
+}
+
+.ocico {
+  position: absolute;
+  height: 22.22222px;
+  width: 33.33333px;
+  border: solid black 2.5px;
+  background: #F4C2C2;
+  left: 34%;
+  top: 38%;
+  border-radius: 50%;
+}
+
+.nariz {
+  position: absolute;
+  height: 8.33333px;
+  width: 5.88235px;
+  background: #FF55A3;
+  border-radius: 50%;
+  top: 30%;
+}
+
+.nariz__d {
+  right: 14%;
+}
+
+.nariz__i {
+  left: 14%;
 }
 /*# sourceMappingURL=style.css.map */
