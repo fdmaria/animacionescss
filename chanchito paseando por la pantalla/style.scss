@@ -1,10 +1,11 @@
 $tamañotodo:200px;
 $colorglobo: brown;
-$colorcerdo: #fddfdc;
+$colorcerdo: #FCE6DE;
 $colorocico: #F4C2C2;
 $colornariz: #FF55A3;
 $colorborde: black;
-$colorcesto: linear-gradient(180deg, #f0d681, rgb(80, 53, 3));
+$colorcesto: linear-gradient(180deg, #eeb61d, rgb(65, 42, 1));
+$colorglobo: linear-gradient(180deg, #f7f44e, rgb(223, 74, 37));
 $grosorborde:2.5px;
 
 .container{
@@ -12,18 +13,18 @@ $grosorborde:2.5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+    animation: viaje 1.2s infinite; 
+    animation: 8s march linear infinite;
 }
  .globoaereo{
      position: relative;
-     display: flex;
+     display: flex; 
      flex-direction: column;
-     align-items: center;
-     
-     z-index: 100;
+     align-items: center;     
+     z-index: 90;
      width: $tamañotodo;
      height: 2 * $tamañotodo;
-     border: solid black;
  }
  .globo{
      position: relative;
@@ -31,13 +32,16 @@ $grosorborde:2.5px;
      height: $tamañotodo;
      border: solid black;
      border-radius: 50%;
+     background: $colorglobo;
+     z-index: 80;
  }
  .soga{
      position: absolute;
-     top: 45%;
-     height: $tamañotodo / 1.5;
+     top: 43%;
+     height: $tamañotodo / 1.3;
      width: $tamañotodo / $tamañotodo;
-     border: solid #000 0.5px;
+     border: solid #000 $grosorborde;
+     background: $colorcesto;
      &__d{        
         left: 25%;
         transform:  rotate(-15deg);
@@ -55,56 +59,61 @@ $grosorborde:2.5px;
      border: solid #000;
      border-radius: 20% 20% 25% 25%/  65% 65% 30% 30%;
      background: $colorcesto;
+     z-index: 201;
  }
 
  .cerdito{    
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    height: $tamañotodo / 2.5;
+    align-items: flex-start; 
+    height: $tamañotodo / 2.3;
     width: $tamañotodo / 2;
-    top: 59%;
-    border: solid $colorborde ;
+    top: 61.5%;
+    z-index: 100;
  }
  .cara{    
     position: relative;
     height: $tamañotodo / 3;
-    width: $tamañotodo / 2;
+    width: $tamañotodo / 2.2;
     border: solid $colorborde $grosorborde;
     border-radius: 50%;
-    transform: rotate(-17deg);
+    transform: rotate(-28deg);
     background: $colorcerdo;
+    z-index: 101;
  }
  .orejas{
     position: absolute;    
-    border: solid $colorborde $grosorborde;
+    border: solid  $grosorborde;
     border-radius: 80% 0;    
     background: $colorcerdo;
      &__d{
         height: $tamañotodo/10;
         width: $tamañotodo/10;
+        border-color:#000 transparent #000 #000; 
+        transform: rotate(10deg);
      }
      &__i{
          right: 0%;
         height: $tamañotodo/10;
         width: $tamañotodo/10;
-        transform: rotate(73deg);
+        transform: rotate(80deg);
+        border-color:#000 #000 transparent #000 ;
      }
  }
  .ojos{
      position: absolute;
-     width: 20%;
-     height: 2%;
-     top: 30%;
-     border:  solid #000 3px;
+     width: 10%;
+     height: 5%;
+     top: 40%;
+     border:  solid  3px;
      border-color:#000 transparent transparent transparent;     
-     border-radius: 50%/85% 85% 0 0;
+     border-radius: 50%/100% 100% 0 0;
      &__d{
-         right: 20%;
+         right: 12%;
      }
      &__i{
-         left: 20%;
+         left: 12%;
      }
  }
  .ocico{
@@ -113,14 +122,14 @@ $grosorborde:2.5px;
     width: $tamañotodo/6;
     border: solid $colorborde $grosorborde;
     background: $colorocico;
-    left: 34%;
+    left: 29%;
     top: 38%;
     border-radius: 50%;
  }
  .nariz{
     position: absolute;
-    height: $tamañotodo/24;
-    width: $tamañotodo/34;    
+    height: $tamañotodo/20;
+    width: $tamañotodo/30;    
     background: $colornariz;
     border-radius: 50%;
     top: 30%;
@@ -133,11 +142,73 @@ $grosorborde:2.5px;
  }
 
  .cuerpo{
-
+     position: relative;
+     display: flex;
+     height: 15%;
+     width: 100%;
  }
  .brazo-d{
-
+     position: absolute;
+     bottom: 6%;
+     left: 28%;
+     height: $tamañotodo/10;
+     width: 30%;
+     border: solid  $grosorborde  $colorborde;
+     border-radius: 0% 80%;   
+     transform: rotate(-33deg);     
+     background: $colorcerdo;
+     z-index: 305;
  }
  .brazo-i{
-     
+     position: absolute;
+     bottom: 120%;
+     right:  0%;
+     height: 100%;
+     width: 30%;
+     border: solid black $grosorborde;
+     background: $colorcerdo;   
+     border-radius: 0 0 100% 100%;      
+     transform: rotate(-44deg); 
 }
+.dedos{
+    position: absolute;
+    height: $tamañotodo/30;
+    width: $tamañotodo/40;
+    bottom: 270%;
+    right: 0%;
+    border: solid black $grosorborde;
+    background: #000;
+    transform: rotate(-50deg);
+    clip-path: polygon(100% 11%, 40% 50%, 100% 89%, 0 100%, 0 0);
+}
+
+
+// Animacion
+@keyframes viaje {
+    0% {
+      top: 30px;
+    }
+    25% {
+      top: 0;
+      transform: rotate(-5deg);
+    }
+    50% {
+      top: 30px;
+    }
+    75% {
+      top: 0;
+      transform: rotate(5deg);
+    }
+    100% {
+      top: 30px;
+    }
+  }
+
+  @keyframes march {
+    0% {
+      left: -800px;
+    }
+    100% {
+      left: 0px;
+    }
+  }
