@@ -6,16 +6,26 @@ $colornariz: #FF55A3;
 $colorborde: black;
 $colorcesto: linear-gradient(180deg, #eeb61d, rgb(65, 42, 1));
 $colorglobo: linear-gradient(180deg, #f7f44e, rgb(223, 74, 37));
-$grosorborde:2.5px;
+$grosorborde:2px;
 
-.container{
+
+.contenedor{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;    
+    animation: 15s march linear infinite;
+}
+.contenido{
     position: relative;
+    width: $tamañotodo;
+    height: 4 * $tamañotodo;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     animation: viaje 1.2s infinite; 
-    animation: 8s march linear infinite;
 }
  .globoaereo{
      position: relative;
@@ -30,7 +40,7 @@ $grosorborde:2.5px;
      position: relative;
      width: $tamañotodo;
      height: $tamañotodo;
-     border: solid black;
+     border: solid black $grosorborde;
      border-radius: 50%;
      background: $colorglobo;
      z-index: 80;
@@ -56,7 +66,7 @@ $grosorborde:2.5px;
      bottom: 0;
      height: $tamañotodo/2.5;
      width: $tamañotodo/1.4;
-     border: solid #000;
+     border: solid #000 $grosorborde;
      border-radius: 20% 20% 25% 25%/  65% 65% 30% 30%;
      background: $colorcesto;
      z-index: 201;
@@ -69,7 +79,7 @@ $grosorborde:2.5px;
     align-items: flex-start; 
     height: $tamañotodo / 2.3;
     width: $tamañotodo / 2;
-    top: 61.5%;
+    top: 55.5%;
     z-index: 100;
  }
  .cara{    
@@ -106,7 +116,7 @@ $grosorborde:2.5px;
      width: 10%;
      height: 5%;
      top: 40%;
-     border:  solid  3px;
+     border:  solid  $grosorborde;
      border-color:#000 transparent transparent transparent;     
      border-radius: 50%/100% 100% 0 0;
      &__d{
@@ -206,9 +216,15 @@ $grosorborde:2.5px;
 
   @keyframes march {
     0% {
-      left: -800px;
+      left: -10%
+    }
+    50% {
+      left: 25%;
+    }
+    50% {
+      left: 50%;
     }
     100% {
-      left: 0px;
+      left: 100%;
     }
   }
