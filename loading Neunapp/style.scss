@@ -1,0 +1,64 @@
+$tamaño: 300px;
+$color: blue;
+
+.contenedor{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;    
+    animation: 15s march linear infinite;
+}
+
+.contenido{
+    position: relative;
+    width: $tamaño;
+    height: $tamaño;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.rectangulo{
+    position: absolute;
+    height: $tamaño;
+    width: $tamaño / 4;
+    border: solid;
+    z-index: 110;
+    background: red;
+    &__i{
+        left: 0%;
+    }
+    &__d{
+        right: 0%;
+    }
+}
+.diagonal{
+    position: absolute;
+    height: $tamaño*1;
+    width: $tamaño / 4;
+    border: solid;
+    transform: rotate(-41deg);
+    left: 37%;
+    z-index: 101;
+    background: $color;
+}
+.circulos{
+    position: absolute;
+    height: $tamaño / 8;
+    width: $tamaño / 16;
+    border: solid ;
+    z-index: 120;
+    background: $color;    
+    &__i{
+        border-radius:  100% 0 0 100%;
+        border-color: black transparent black black ;
+        left: 20%;
+        top: 15%;
+    }
+    &__d{
+        border-radius: 0 100% 100% 0;
+        border-color: black black   black transparent;
+        right: 20%;
+        bottom: 15%;
+    }
+}
