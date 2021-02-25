@@ -8,8 +8,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: 15s march linear infinite;
-          animation: 15s march linear infinite;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .contenido {
@@ -28,30 +29,57 @@
 }
 
 .rectangulo {
-  position: absolute;
+  position: relative;
   height: 300px;
   width: 75px;
   border: solid;
   z-index: 110;
-  background: red;
+  background: orange;
 }
 
 .rectangulo__i {
+  position: absolute;
   left: 0%;
 }
 
 .rectangulo__d {
+  position: absolute;
   right: 0%;
+}
+
+.semicirculo {
+  position: absolute;
+  height: 37.5px;
+  width: 37.5px;
+  border: solid;
+  z-index: 120;
+  background: white;
+}
+
+.semicirculo__i {
+  -webkit-clip-path: circle(50% at 100% 50%);
+          clip-path: circle(50% at 100% 50%);
+  top: 7.5%;
+  left: 47%;
+  border-color: transparent;
+}
+
+.semicirculo__d {
+  -webkit-clip-path: circle(50% at 0 50%);
+          clip-path: circle(50% at 0 50%);
+  border-color: transparent;
+  right: 46%;
+  bottom: 7.5%;
 }
 
 .diagonal {
   position: absolute;
   height: 300px;
-  width: 75px;
+  width: 139.53488px;
+  -webkit-clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 30%);
+          clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 30%);
   border: solid;
-  -webkit-transform: rotate(-41deg);
-          transform: rotate(-41deg);
-  left: 37%;
+  left: 26%;
   z-index: 101;
   background: blue;
 }
@@ -59,23 +87,25 @@
 .circulos {
   position: absolute;
   height: 37.5px;
-  width: 18.75px;
+  width: 37.5px;
   border: solid;
-  z-index: 120;
+  z-index: 130;
   background: blue;
 }
 
 .circulos__i {
-  border-radius: 100% 0 0 100%;
-  border-color: black transparent black black;
-  left: 20%;
-  top: 15%;
+  -webkit-clip-path: circle(50% at 100% 50%);
+          clip-path: circle(50% at 100% 50%);
+  border-color: transparent;
+  left: 12.5%;
+  top: 8.5%;
 }
 
 .circulos__d {
-  border-radius: 0 100% 100% 0;
-  border-color: black black   black transparent;
-  right: 20%;
-  bottom: 15%;
+  -webkit-clip-path: circle(50% at 0 50%);
+          clip-path: circle(50% at 0 50%);
+  border-color: transparent;
+  right: 12.5%;
+  bottom: 6.5%;
 }
 /*# sourceMappingURL=style.css.map */
