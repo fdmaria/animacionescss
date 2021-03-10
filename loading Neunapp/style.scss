@@ -1,5 +1,7 @@
-$tamaño: 300px;
-$color: blue;
+$tamaño: 50px;
+$color1: #0396FF;
+$color2: #3677FF;
+$color3: #000DFF;
 
 .contenedor{
     position: fixed;
@@ -20,66 +22,74 @@ $color: blue;
 .rectangulo{
     position: relative;
     height: $tamaño;
-    width: $tamaño / 4;
-    border: solid;
-    z-index: 110;
-    background: orange;
+    width: $tamaño / 4;    
     &__i{
         position: absolute;
         left: 0%;
+        border-radius: 25% 0 25% 0;
+        background-color: $color1;
+        z-index: 110;
     }
     &__d{
         position: absolute;
         right: 0%;
+        border-radius: 25% 0 25% 0;
+        background-color: $color3;
+        z-index: 140;
     }
 }
 .semicirculo{
     position: absolute;
-    height: $tamaño / 8;
-    width: $tamaño / 8;
-    border: solid ;
-    z-index: 120;
-    background: white;    
-    &__i{
-        clip-path: circle(50% at 100% 50%);
-        top: 7.5%;
-        left: 47%;
+    height: $tamaño / 4;
+    width: $tamaño / 4;
+    border: solid ;       
+    clip-path: circle(50% at 100% 50%);    
+    &__i{        
+        top: 10%;
+        left: 0%;
         border-color:  transparent  ;
+        background: white;
+        z-index: 120;
     } 
     &__d{ 
-        clip-path: circle(50% at 0 50%);
         border-color: transparent;
-        right: 46%;
-        bottom: 7.5%; 
+        right: 100%;
+        bottom: 11.4%;
+        background: $color3;
+        z-index: 140; 
     } 
 }
-.diagonal{
-    position: absolute;
+
+/* .cont_diagonal{
+    position: relative;
+    width: $tamaño/2;
     height: $tamaño;
-    width: $tamaño / 2.15;
-    clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 30%);
-    border: solid ;
-    left: 26%;
+} */
+.diagonal{
+    position: relative;
+    height: $tamaño;
+    width: $tamaño / 2;
+    clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 40%);
     z-index: 101;
-    background: $color;    
+    background: $color2; 
 }
 .circulos{
     position: absolute;
-    height: $tamaño / 8;
-    width: $tamaño / 8;
-    border: solid ;
-    z-index: 130;
-    background: $color;    
+    height: $tamaño / 4;
+    width: $tamaño / 4;
+    border: solid ;    
+    background: $color2;    
+    clip-path: circle(50% at 100% 50%); 
+    z-index: 130;   
     &__i{
-        clip-path: circle(50% at 100% 50%);
-        border-color:  transparent;
-        left: 12.5%;
-        top: 8.5%;
+        top: 10%;
+        left: 0%;
+        border-color:  transparent  ;
     }
     &__d{
-        clip-path: circle(50% at 0 50%);
-        border-color:  transparent;
-        right: 12.5%;
-        bottom: 6.5%;
+        border-color: transparent;
+        right: 25%;
+        bottom: 11.4%; 
+        background: white;
     }
 }

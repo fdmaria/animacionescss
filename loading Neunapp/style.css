@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .contenedor {
   position: fixed;
   width: 100%;
@@ -15,8 +16,8 @@
 
 .contenido {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 50px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,82 +31,87 @@
 
 .rectangulo {
   position: relative;
-  height: 300px;
-  width: 75px;
-  border: solid;
-  z-index: 110;
-  background: orange;
+  height: 50px;
+  width: 12.5px;
 }
 
 .rectangulo__i {
   position: absolute;
   left: 0%;
+  border-radius: 25% 0 25% 0;
+  background-color: #0396FF;
+  z-index: 110;
 }
 
 .rectangulo__d {
   position: absolute;
   right: 0%;
+  border-radius: 25% 0 25% 0;
+  background-color: #000DFF;
+  z-index: 140;
 }
 
 .semicirculo {
   position: absolute;
-  height: 37.5px;
-  width: 37.5px;
+  height: 12.5px;
+  width: 12.5px;
   border: solid;
-  z-index: 120;
-  background: white;
+  -webkit-clip-path: circle(50% at 100% 50%);
+          clip-path: circle(50% at 100% 50%);
 }
 
 .semicirculo__i {
-  -webkit-clip-path: circle(50% at 100% 50%);
-          clip-path: circle(50% at 100% 50%);
-  top: 7.5%;
-  left: 47%;
+  top: 10%;
+  left: 0%;
   border-color: transparent;
+  background: white;
+  z-index: 120;
 }
 
 .semicirculo__d {
-  -webkit-clip-path: circle(50% at 0 50%);
-          clip-path: circle(50% at 0 50%);
   border-color: transparent;
-  right: 46%;
-  bottom: 7.5%;
+  right: 100%;
+  bottom: 11.4%;
+  background: #000DFF;
+  z-index: 140;
 }
 
+/* .cont_diagonal{
+    position: relative;
+    width: $tamaño/2;
+    height: $tamaño;
+} */
 .diagonal {
-  position: absolute;
-  height: 300px;
-  width: 139.53488px;
-  -webkit-clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 30%);
-          clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 30%);
-  border: solid;
-  left: 26%;
+  position: relative;
+  height: 50px;
+  width: 25px;
+  -webkit-clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 40%);
+          clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 40%);
   z-index: 101;
-  background: blue;
+  background: #3677FF;
 }
 
 .circulos {
   position: absolute;
-  height: 37.5px;
-  width: 37.5px;
+  height: 12.5px;
+  width: 12.5px;
   border: solid;
+  background: #3677FF;
+  -webkit-clip-path: circle(50% at 100% 50%);
+          clip-path: circle(50% at 100% 50%);
   z-index: 130;
-  background: blue;
 }
 
 .circulos__i {
-  -webkit-clip-path: circle(50% at 100% 50%);
-          clip-path: circle(50% at 100% 50%);
+  top: 10%;
+  left: 0%;
   border-color: transparent;
-  left: 12.5%;
-  top: 8.5%;
 }
 
 .circulos__d {
-  -webkit-clip-path: circle(50% at 0 50%);
-          clip-path: circle(50% at 0 50%);
   border-color: transparent;
-  right: 12.5%;
-  bottom: 6.5%;
+  right: 25%;
+  bottom: 11.4%;
+  background: white;
 }
 /*# sourceMappingURL=style.css.map */
