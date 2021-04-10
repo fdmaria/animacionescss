@@ -1,8 +1,7 @@
 $tamaño: 50px;
-$color1:#0f4c75;
-$color2: #3282b8;
-$color3: #bbe1fa;
-
+$color1: linear-gradient( 135deg, #FFF6B7 10%, #F6416C 100%);
+$color2: linear-gradient( 135deg, #90F7EC 10%, #32CCBC 100%);
+$color3: linear-gradient( 135deg, #92FFC0 10%, #002661 100%);
 .contenedor{
     position: fixed;
     width: 100%;
@@ -18,27 +17,27 @@ $color3: #bbe1fa;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    //animation: girar 2s  infinite; 
+    animation: girar 2s  infinite; 
 }
 .rectangulo{
     position: relative;
     height: $tamaño;
-    width: $tamaño / 4;  
-    //animation: juntar 2s 1 linear;  
+    width: $tamaño / 3;  
+    animation: juntar 2s 1 linear;  
     &__i{
         position: absolute;
         left: 0%;
         //border-radius: 25% 0 25% 0;
-        background-color: $color1;
+        background: $color1;
         z-index: 110; 
     }
     &__d{
         position: absolute;
         right: 0%;
         //border-radius: 25% 0 25% 0;
-        background-color: $color3;
+        background: $color3;
         z-index: 140;
-        //animation: juntar 2s 3 linear;  
+        animation: juntar 2s 3 linear;  
     }
 }
 .semicirculo{
@@ -65,15 +64,15 @@ $color3: #bbe1fa;
 
 .cont_diagonal{
     position: relative;
-    width: $tamaño/2;
+    width: $tamaño/3;
     height: $tamaño;
-    //animation: juntar 2s 2 linear;
+    animation: juntar 2s 2 linear;
 } 
 .diagonal{
     position: relative;
     height: $tamaño;
-    width: $tamaño / 2;
-    clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 40%);
+    width: $tamaño / 3;
+    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 60%);
     z-index: 101;
     background: $color2;
 }
